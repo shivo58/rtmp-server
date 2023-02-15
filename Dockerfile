@@ -1,5 +1,5 @@
 FROM debian:bullseye-slim
-RUN apt-get update && apt-get upgrade \
+RUN apt-get update && apt-get -y upgrade \
     && apt-get -y install nginx libnginx-mod-rtmp ffmpeg gettext-base \
     && rm -rf /var/cache/apk/*
 COPY nginx.conf /
